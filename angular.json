@@ -118,7 +118,15 @@
         "release": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "command": "cd dist/apps/notes && npm publish"
+            "commands": [
+              "cd apps/notes",
+              "npm version {args.version}",
+              "cd ../..",
+              "ng build notes --prod",
+              "cd dist/apps/notes",
+              "npm publish"
+            ],
+            "parallel": false
           }
         }
       }
