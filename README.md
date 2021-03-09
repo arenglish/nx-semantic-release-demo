@@ -10,6 +10,7 @@ This does not yet demonstrate how to:
 * update an inner project Changelog with only commits relevant to that project (semantic-release-monorepo package has that capability, but I have not tried it in an nx workspace yet)
 * release applications on independent versions (this method is platform versioned, yet only publishes applications that have changed per version)
 
+## Steps (also reference workspace files to see full context)
 * Add a "release" target to your apps "architect" property in angular.json
 ```json
 {
