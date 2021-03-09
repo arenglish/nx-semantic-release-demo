@@ -1,3 +1,6 @@
 {
-  "branches": ["main"]
+  "branches": ["main"],
+  "plugins": ["@semantic-release/npm",["@semantic-release/exec", {
+    "publishCmd": "nx affected:build --prod --parallel"
+  }]]
 }

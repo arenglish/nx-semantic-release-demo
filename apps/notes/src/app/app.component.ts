@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+let test;
 @Component({
   selector: 'nx-angular-release-demo-root',
   templateUrl: './app.component.html',
