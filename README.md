@@ -7,7 +7,7 @@ I have not tested this yet in a public CICD job, but have run it successfully lo
 Please post an issue for any questions or if it does not work for you.
 
 This does not yet demonstrate how to:
-* update an inner project Changelog with only commits relevant to that project (semantic-release-monorepo pacakge has that capability, but I have not tried it in an nx workspace yet)
+* update an inner project Changelog with only commits relevant to that project (semantic-release-monorepo package has that capability, but I have not tried it in an nx workspace yet)
 * release applications on independent versions (this method is platform versioned, yet only publishes applications that have changed per version)
 
 * Add a "release" target to your apps "architect" property in angular.json
