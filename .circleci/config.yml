@@ -1,0 +1,7 @@
+version: 2.1
+orbs:
+  node: circleci/node@latest
+workflows:
+  node-tests:
+    jobs:
+      - echo test
