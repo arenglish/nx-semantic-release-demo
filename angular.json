@@ -118,7 +118,7 @@
         "release": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "command": "cd apps/notes && semantic-release"
+            "command": "cd dist/apps/notes && npm publish"
           }
         }
       }

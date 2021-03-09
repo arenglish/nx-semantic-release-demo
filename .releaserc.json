@@ -1,6 +1,7 @@
 {
   "branches": ["main"],
-  "plugins": ["@semantic-release/npm",["@semantic-release/exec", {
-    "publishCmd": "nx affected:build --prod --parallel"
+  "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator","@semantic-release/npm",["@semantic-release/exec", {
+    "prepareCmd": "nx affected:build --prod --parallel --base=main",
+    "publishCmd": "nx affected:release"
   }]]
 }
