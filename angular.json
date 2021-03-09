@@ -260,6 +260,24 @@
             "jestConfig": "apps/calendar/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "cd apps/calendar && npm version {args.version}",
+              {
+                "command": "ng build calendar --prod",
+                "forwardAllArgs": false
+              },
+              {
+                "command": "cd dist/apps/calendar && npm publish",
+                "forwardAllArgs": false
+              }
+            ],
+            "cwd": "./",
+            "parallel": false
+          }
         }
       }
     },
@@ -285,6 +303,12 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/calendar-e2e/**/*.{js,ts}"]
+          }
+        },
+        "release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "echo No release target for calendar-e2e"
           }
         }
       }
