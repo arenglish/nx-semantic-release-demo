@@ -1,4 +1,4 @@
-# Example Angular Application Monorepo Semantic Release Workflow
+# Example Nx Projects Release Workflow with Semantic Release
 
 This is an example Nx monorepo workspace of angular applications that only publishes affected applications using nx's `affected` commands, a custom project target, and semantic release.
 
